@@ -1,0 +1,12 @@
+<h1>New Player</h1>
+
+<%= render 'form', player: @player %>
+
+<%= form_for @player do |f| %>
+    <%= f.collection_select :team_id, Team.all, :id, :full_name, prompt: true %>
+    <%= f.submit %>
+<% end %>
+
+
+
+
